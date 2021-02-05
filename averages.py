@@ -3,6 +3,12 @@ from statistics import mean
 from statistics import mode
 from statistics import median
 
+#Example Inputs
+#py averages.py 1 2 3 4 5
+#py averages.py --median --mode 1 1 1 1 1 2 2 2
+#py averages.py --mean --file array.txt
+#py averages.py --mean --mode --file array.txt 4 5 24
+
 #------- Array Initialisation -------#
 
 number_of_args = len(sys.argv)
