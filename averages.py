@@ -3,24 +3,20 @@ from statistics import mean
 from statistics import mode
 from statistics import median
 
-#Example Inputs
-#py averages.py 1 2 3 4 5
-#py averages.py --median --mode 1 1 1 1 1 2 2 2
-#py averages.py --mean --file array.txt
-#py averages.py --mean --mode --file array.txt 4 5 24
-
 #------- Array Initialisation -------#
 
 number_of_args = len(sys.argv)
 array = []
+first_int = 0
 
 for i in range(0, len(sys.argv)):
     if sys.argv[i].isdigit():
         first_int = i
         break
 
-for n in range(first_int, len(sys.argv)):
-    array.append(int(sys.argv[n]))
+if first_int != 0:
+    for n in range(first_int, len(sys.argv)):
+        array.append(int(sys.argv[n]))
 
 if len(array) > 8:
     print("Error: expected max 8 integer data points")
@@ -79,4 +75,3 @@ if flags == [False, False, False]:
     median_calc(array)
 else:
     printer(flags)
-
