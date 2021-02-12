@@ -9,6 +9,9 @@ number_of_args = len(sys.argv)
 array = []
 first_int = 0
 
+
+#To find where the flags end I'm looking for the first digit, looking for flags '--' is the better method (after tutorial)
+
 for i in range(0, len(sys.argv)):
     if sys.argv[i].isdigit():
         first_int = i
